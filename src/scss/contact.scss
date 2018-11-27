@@ -1,0 +1,188 @@
+$title-font: 'Khula', sans-serif;
+$normal-font: 'Raleway', sans-serif;
+
+//Define Colours
+$wt-blue: #1b3d72;
+$wt-grey: #8e9093;
+$wt-darkBlue: #0c1b2e;
+$wt-accent: #d07639; //Orange
+$wt-lightGrey: #eeeeee; //yellow
+$wt-buttonInactive: rgba(255,255,255,0.5);
+
+.contact {
+	h1 {
+		font-family: $title-font;
+		// font-weight: lighter;
+		color: $wt-blue;
+		padding-left: 5px;
+	}
+	p {
+		@extend h1;
+		font-family: $normal-font;
+	}
+	width: 100%;
+	text-align: center;
+	.email {
+		display: flex;
+		justify-content: center;
+		@media (width < 700px) {
+			flex-direction: column;
+		}
+		p {
+			margin-top: 0px;
+		}
+		a {
+			color: $wt-accent;
+			text-decoration: none;
+			padding-left: 5px;
+			&:hover {
+				font-weight:bolder;
+			}
+		}
+	}
+	
+	.form {
+		text-align: center;
+		width: 100%;
+		background-color: $wt-lightGrey;
+		margin-bottom: 0px;
+		padding-bottom: 10px;
+		.row {
+			display: inline-flex;
+			width: 60%;
+			@media (width < 1200px) {
+				text-align: center;
+				display: block;
+				width: 100%;
+			}
+			@media (width < 700px) {
+				display: block;
+				width: 95%;
+				margin-left: 2.5%;
+			}
+			.halfLine {
+
+				display: inline-flex;
+				text-align: left;
+				// border: solid 1px red;
+				width: 50%;
+				@media (width < 1200px) {
+					width: 80%;
+				}
+				@media (width < 700px) {
+					display: block;
+					width: 100%;
+				}
+				p {
+					@media (width < 1200px) {
+						text-align: left;
+						padding-left: 5px;
+						margin-bottom: 4px;
+						width: 10%;
+					}
+					@media (width < 700px) {
+						width: 30%;
+					}
+					text-align: right;
+					font-family: $normal-font;
+					color: $wt-blue;
+					padding-right: 10px;
+					width: 20%;
+				}
+				.textBox {
+					@media (width < 1200px) {
+						text-align: left;
+						// margin-left: 3.5%;
+						width:100%;
+						padding-left: 0px;
+					}
+					@media (width < 700px) {
+						text-align: left;
+						// margin-left: 3.5%;
+						width:100%;
+						padding-left: 0px;
+					}
+					padding-left: 10px;
+					height: 30px;
+					width: 80%;
+					margin-top: 8px;
+					border: none;
+					border-radius: 6px;
+					color: $wt-blue;
+					font-family: $normal-font;
+					font-size: 1.15em;
+				}
+			}
+		}
+		.message {
+			display: inline-block;
+			text-align: center;
+			width: 60%;
+
+			@media (width < 1200px) {
+				display: inline-block;
+				width: 80%;
+			}
+			@media (width < 700px) {
+				display: block;
+				width: 95%;
+				margin-left: 2.5%;
+			}
+			p {
+				text-align: left;
+				@media (width < 1200px) {
+				padding-left: 5px;
+				}
+				padding-left: 3.5%;
+				margin-bottom: 4px;
+			}
+			.messageBox {
+
+				@media (width < 1200px) {
+					width: 100%;
+					padding-left: 0px;
+					margin-left: 0px;
+				}
+				padding-left: 10px;
+				// margin-right: -10px;
+				margin-left: 3.5%;
+				width: 96.5%;
+				height: 200px;
+				margin-top: 0px;
+				border: none;
+				border-radius: 6px;
+				color: $wt-blue;
+				font-family: $normal-font;
+				font-size: 1.15em;
+			}
+		}
+	}
+	.buttonArea {
+		margin-top: 0px;
+		background-color: $wt-lightGrey;
+		padding-bottom: 30px;
+	}
+	.submit {
+			@media (width < 1200px) {
+				margin-left: 10px;
+			}
+			all: unset;
+
+			padding-left: 10px;
+			padding-right: 10px;
+			background-color: $wt-accent;
+			text-align: center;
+			font-family: $normal-font;
+			font-size: 1.25em;
+			font-weight: lighter;
+			color: white;
+			border: none;
+			height: 30px;
+			cursor: pointer;
+			border-radius: 3px;
+			&:hover {
+				background-color: white;
+				color: $wt-blue;
+			}
+		}
+}

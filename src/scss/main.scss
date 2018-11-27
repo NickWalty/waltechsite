@@ -1,0 +1,141 @@
+// Define fonts
+$title-font: 'Khula', sans-serif;
+$normal-font: 'Raleway', sans-serif;
+
+//Define Colours
+$wt-blue: #1b3d72;
+$wt-grey: #8e9093;
+$wt-darkBlue: #0c1b2e;
+$wt-accent: #d07639; //Orange
+$wt-accent2: #ecd164; //yellow
+$wt-menuBG: rgba(208,118,57,.5);
+
+html {
+	background-color: $wt-darkBlue;
+}
+
+body {
+	max-width: 1200px;
+	background-color: white;
+	font-family: $normal-font;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+}
+
+// Begin Menu Section
+
+@mixin titleText($size) {
+	@media (width < 370px ) {
+		font-size: .65em * $size;
+	}
+	@media ( 370px <= width <= 550px ) {
+		font-size: .8em * $size;
+	}
+	@media ( 550px <= width <= 700px ) {
+		font-size: 1.2em * $size;
+	}
+	@media (700px <= width <= 1200px) {
+		font-size: 1.5em * $size;
+	}
+	@media (width > 1200px) {
+		font-size: 1.5em * $size;
+	}
+}
+
+@mixin menuText($size) {
+	@media ( width < 550px) {
+		font-size: .65em * $size;
+		font-weight: lighter;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	@media ( 550px <= width <= 700px ) {
+		font-size: 1em * $size;
+		font-weight: lighter;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	@media (700px <= width <= 1200px) {
+		font-size: 1em * $size;
+		font-weight: lighter;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	@media (width > 1200px) {
+		font-size: 1em * $size;
+		font-weight: lighter;
+		margin-left: 8%;
+		margin-right: 8%;
+	}
+}
+
+.menu {
+	position: relative;
+	font-family: $title-font;
+	img{
+		width:100%;
+		height: auto;
+	}
+	.title {
+		font-weight: lighter;
+		font-family: $title-font;
+		position: absolute;
+    	left: 0;
+    	top: 35%;
+    	width: 100%;
+    	display: flex;
+    	flex-direction: column;
+    	text-align: center;
+		.top {
+			color: white;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			padding: 0px 0px 0px 0px;
+			@include titleText(3);
+		}
+		.bottom {
+			color: $wt-accent;
+			margin-top: 0px;
+			position: absolute;
+    		left: 0;
+    		top: 60%;
+    		width: 100%;
+			@include titleText(1.65);
+		}
+	}
+	.navBar {
+		// background-color: $wt-menuBG;
+		width:100%;
+		color: white;
+		position: absolute;
+    	bottom: 8px;
+    	left: 0px;
+		text-align: center;
+
+    	.nav {
+    		color: white;
+    		text-decoration: none;
+			@include menuText(2);
+			&:hover {
+				color: $wt-accent;
+    			}
+			}
+
+
+    	.navSelected {
+    		color: $wt-accent;
+    	}
+	}
+}
+
+//Begin Footer Section
+.footer {
+	background-color: $wt-blue;
+	color: $wt-grey;
+	font-family: $normal-font;
+	font-size: .75em;
+	padding-top:10px;
+	padding-left: 15px
+;	height: 35px;
+}

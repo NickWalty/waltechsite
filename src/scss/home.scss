@@ -1,0 +1,325 @@
+// Define fonts
+$title-font: 'Khula', sans-serif;
+$normal-font: 'Raleway', sans-serif;
+
+//Define Colours
+$wt-blue: #1b3d72;
+$wt-grey: #8e9093;
+$wt-darkBlue: #0c1b2e;
+$wt-accent: #d07639; //Orange
+$wt-accent2: #ecd164; //yellow
+$wt-servicesBG: rgba(0,0,0,.35);
+
+.home {
+	text-align: center;
+	h1 {
+		color:$wt-blue;
+		font-weight: lighter;
+		padding-bottom: 20px;
+	}
+	padding-bottom: 30px;
+	padding-top: 20px;
+}
+
+.profile {
+	text-align: center;
+	display: flex;
+	flex-wrap: no-wrap;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 15px;
+	margin: auto;
+	width: 80%;
+
+	@media (width < 700px) {
+		flex-direction: column;
+		width: 100%;	
+	}
+	@media (700px <= width < 1200px) {
+		flex-direction: column;
+		width: 90%;	
+	}
+
+	
+		
+	.picture {
+		@media (width < 1200px) {
+			max-width: 300px;
+		}	
+		max-width:18%;
+		height: auto;
+		margin: auto;
+		margin-bottom: 25px;
+		box-shadow: 0px 0px 5px grey;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		p {
+			margin-top: 2px;
+			margin-bottom: 4px;
+			color: $wt-blue;
+		}
+	}
+	.intro {
+		width: 80%;
+		@media (width < 1200px) {
+			margin-left: 10px;
+			width: 97%;
+		}
+		p {
+			font-family: $normal-font;
+			color: $wt-blue;
+			text-align: justify;
+			margin-right: 10px;
+			margin-top: 0px;
+			font-size: 1.25em;
+			@media (width < 700px) {
+				margin-left: 0px;
+				margin-right: 0px;
+				width: 96%;
+			}
+		}
+		@media (width < 700px) {
+			margin-left: 10px;
+			width: 97%;
+		}
+
+	}
+	
+}
+
+.services {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	background-image: url('../images/ServicesBG2.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: right;
+	padding-bottom: 40px;
+	h1 {
+		width: 100%;
+		color: white;
+		padding-bottom: 40px;
+		padding-top: 20px;
+		flex-direction: column;
+	}
+	.serviceCard {
+		@media (width < 700px) {
+			width:100%;
+		}
+		@media (700px <= width <= 1200px) {
+			max-width:48%;
+		}
+		@media (width > 1200px) {
+			width:32%;
+		}
+		text-align: center;
+		font-family: $normal-font;
+		background-color: $wt-servicesBG;
+		color: white;
+		margin-left:5px;
+		margin-right:5px;
+		margin-top:5px;
+		border-radius: 6px 6px 6px 6px;
+		img {
+			width: 100px;
+			height: auto;
+		}
+		h2 {
+		color: $wt-accent;
+		font-family: $title-font;
+		font-size: 3em;
+		font-weight: lighter;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		}
+	}
+
+	.serviceText {
+		text-align: justify;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.serviceCardBottom {
+	@extend .serviceCard;
+	@media (700px <= width <= 1200px) {
+			max-width:97%;
+		}
+	}
+}
+
+.process {
+	border: solid 1px $wt-blue;
+	background-color: $wt-blue;
+	padding-bottom: 30px;
+	text-align: left;
+	h1 {
+		text-align: center;
+		padding-top: 0px;
+		color: white;
+		margin-bottom: 0px;
+	}
+	.row {
+		@media ( width < 700px) {
+			flex-direction: column;
+		}
+		display: flex;
+		flex-direction: row;
+		// align-items: center;
+		width:100%;
+		padding-top:10px;
+		.step {
+			background-image: url('../images/process.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: right;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: $wt-darkBlue;
+			color: white;
+			width: 30%;
+			height: auto;
+			border-radius: 6px 0px 0px 6px;
+			margin-left:12px;
+			margin-right: 0px;
+			margin-top: 0px;
+			@media (width < 700px) {
+				width: 99%;
+				border-radius: 6px 6px 0px 0px;
+				margin-left:3px;
+				margin-right:3px;
+				margin-top: 6px;
+			}
+			p {
+				margin-bottom: 0px;
+				font-weight: lighter;
+				font-size: 1.5em;
+			}
+			h2 {
+				color: $wt-accent;
+				margin-top: 0px;
+				font-size: 1.8em;
+				font-weight: lighter;
+			}
+		}
+		.description {
+			background-color: white;
+			width: 70%;
+			color: $wt-blue;
+			border-radius: 0px 6px 6px 0px;
+			margin-right:12px;
+			margin-left: 0px;
+			@media (width < 700px) {
+				width: 99%;
+				border-radius: 0px 0px 6px 6px;
+				margin-left:3px;
+				margin-right:3px;
+				margin-top: 0px;
+			}
+			p {
+				margin-left: 6px;
+				margin-right: 6px;
+				@media (width < 700px) {
+					text-align: justify;
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+			}
+			.list {
+				text-align: left;
+				font-weight: bolder;
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				@media ( width < 520px) {
+					flex-direction: column;
+				}
+				
+				p {
+					margin-top: 0px;
+					margin-bottom: 0px;
+					// border: solid 1px red;
+					width: 33%;
+					@media ( width < 520px) {
+					width: 100%;
+				}
+				}
+			}
+			
+		}
+	}
+	
+}
+
+.testimonial {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	padding-bottom: 30px;
+	.testimonialCard {
+		@media (width < 700px) {
+			width:100%;
+		}
+		@media (700px <= width <= 1200px) {
+			max-width:48%;
+		}
+		@media (width > 1200px) {
+			width:32%;
+		}
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-content: center;
+		height:300px;
+		text-align: center;
+		font-family: $normal-font;
+		font-size: .9em;
+		background-image: url('../images/testarch.jpg');
+		background-size: cover;
+		background-attachment: top center;
+		color: white;
+		margin-left:5px;
+		margin-right:5px;
+		margin-top:5px;
+	}
+	h2 {
+		font-family: $title-font;
+		color: $wt-accent;
+		font-size: 3em;
+		font-weight: lighter;
+		margin-bottom: 0px;
+		margin-top: 10px;
+	}
+	.testimonialText {
+		text-align: justify;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.attribution {
+		position: absolute;
+		bottom: -5px;
+		left: 10px;
+		color: $wt-accent;
+		text-align: left;
+		padding-left: 20px;
+	}
+	.testimonialInt {
+		@extend .testimonialCard; 
+		background-image: url('../images/testinterior.jpg'); 
+	}
+	.testimonialBottom {
+		@extend .testimonialCard;
+		background-image: url('../images/testhome.jpg'); 
+		@media (700px <= width <= 1200px) {
+			max-width:97%;
+		}
+	}
+	
+}
